@@ -322,6 +322,7 @@ section {
   line-height: 1.8;
   color: #ccc;
   padding: 2rem 0;
+  font-size: 14px;
 }
 .review .box-container .box .user {
   height: 7rem;

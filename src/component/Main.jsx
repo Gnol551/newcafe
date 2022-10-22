@@ -14,38 +14,34 @@ import { TwitterOutlined } from "@ant-design/icons";
 import { InstagramOutlined } from "@ant-design/icons";
 import { LinkedinOutlined } from "@ant-design/icons";
 import { YoutubeOutlined } from "@ant-design/icons";
-
-
+import Box from "./Box";
+import Product from "./Product";
+import Customs from "./Customs";
+import Blogs from "./Blogs";
 
 export default Main;
 function Main() {
   return (
     <div>
       <header className="header">
-        <Link to="/" className="logo">
+        <a href="#home" className="logo">
           <img src="./img/logo.png" alt="logo" />
-        </Link>
+        </a>
         <nav className="navbar">
-          <Link to="/Home">Home</Link>
-          <Link to="/About">About</Link>
-          <Link to="/Menu">Menu</Link>
-          <Link to="/Product">Product</Link>
-          <Link to="/Review">Review</Link>
-          <Link to="/Contact">Contact</Link>
-          <Link to="/Blogs">Blogs</Link>
+          <a href="#home">Trang chủ</a>
+          <a href="#about">Giới thiệu</a>
+          <a href="#menu">Thực đơn</a>
+          <a href="#product">Sản phẩm</a>
+          <a href="#review">Đánh giá</a>
+          <a href="#contact">Liên hệ</a>
+          <a href="#blogs">Bài viết</a>
         </nav>
         <div className="icons">
           <div>
-            <SearchOutlined id="search-btn" />
-          </div>
-          <div>
             <ShoppingCartOutlined id="cart-btn" />
           </div>
-          <div>
-            <MenuOutlined id="menu-btn" />
-          </div>
         </div>
-        <div className="seacrch-form">
+        {/* <div className="seacrch-form">
           <input type="search" id="search-box" placeholder="search here..." />
           <label for="search-box">
             <SearchOutlined />
@@ -95,50 +91,46 @@ function Main() {
           <Link to="/" className="btn">
             Checkout now
           </Link>
-        </div>
+        </div> */}
       </header>
       {/* home */}
       <section className="home" id="home">
         <div className="content">
-          <h3>fresh coffee in the morning</h3>
+          <h3>Một tách cà phê vào buổi sáng</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint cum
-            culpa doloremque nesciunt expedita architecto, nostrum ipsum facere,
-            porro placeat vero nulla debitis id temporibus sit quas deserunt.
-            Amet, quo!
+            Một tách cà phê vào buổi sáng giúp bạn tỉnh táo và tăng khả năng tập
+            trung của não bộ. Tuy nhiên, uống cafe buổi sáng có tốt không là
+            thắc mắc của rất nhiều người.
           </p>
-          <Link to="/" className="btn">
-            get your now
-          </Link>
         </div>
       </section>
       {/* end Home
           about */}
       <section className="about" id="about">
         <h1 className="heading">
-          <span>about</span>us
+          <span>Về</span> Chúng tôi
         </h1>
         <div className="row">
           <div className="image">
             <img src="./img/about-img.jpeg" alt="" />
           </div>
           <div className="content">
-            <h3>What makes our coffee special?</h3>
+            <h3>Cafe của chúng tôi có gì đặc biệt</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
-              pariatur incidunt ab voluptas tenetur assumenda velit hic, sint,
-              fugiat dignissimos doloremque quasi, voluptatibus eum! Beatae unde
-              corrupti non fuga mollitia.
+              Đặc biệt là chúng tôi đã dày công nguyên cứu, tìm ra công thức
+              rang riêng. Công thức ấy dành riêng cho các bạn trẻ. Các bạn sẽ tự
+              cảm nhận cái đặc biệt trong vị cà phê mà chúng tôi dành cho các
+              bạn. Với chúng tôi đó là công thức rang, còn với các bạn nó là một
+              hàm số với nhiều biến.
             </p>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur
-              itaque accusamus atque dolor perferendis fugit! Similique natus
-              asperiores reprehenderit amet maxime error a neque. Doloribus
-              saepe unde blanditiis repudiandae fugit.
+              Đơn giản cà phê đặc biệt là một cái tên đặc biệt dành cho các bạn.
+              Cà phê đặc biệt là cà phê rang xay nguyên chất 100%. Đạt tiêu
+              chuẩn UTZ, truy xuất nguồn gốc toàn cầu.
             </p>
-            <Link to="/" className="btn">
-              learn more
-            </Link>
+            <a href="#" className="btn">
+              Đọc thêm
+            </a>
           </div>
         </div>
       </section>
@@ -146,388 +138,201 @@ function Main() {
           menu */}
       <section className="menu" id="menu">
         <h1 className="heading">
-          our <span>menu</span>
+          thực đơn <span>của chúng tôi</span>
         </h1>
         <div className="box-container">
-          <div className="box">
-            <img src="./img/menu-1.png" alt="" />
-            <h3>tasty and healty</h3>
-            <div className="price">
-              $15.99 <span>20.99</span>
-            </div>
-            <Link to="/" className="btn">
-              add to cart
-            </Link>
-          </div>
-          <div className="box">
-            <img src="./img/menu-2.png" alt="" />
-            <h3>tasty and healty</h3>
-            <div className="price">
-              $15.99 <span>20.99</span>
-            </div>
-            <Link to="/" className="btn">
-              add to cart
-            </Link>
-          </div>
-          <div className="box">
-            <img src="./img/menu-3.png" alt="" />
-            <h3>tasty and healty</h3>
-            <div className="price">
-              $15.99 <span>20.99</span>
-            </div>
-            <Link to="/" className="btn">
-              add to cart
-            </Link>
-          </div>
-          <div className="box">
-            <img src="./img/menu-4.png" alt="" />
-            <h3>tasty and healty</h3>
-            <div className="price">
-              $15.99 <span>20.99</span>
-            </div>
-            <Link to="/" className="btn">
-              add to cart
-            </Link>
-          </div>
-          <div className="box">
-            <img src="./img/menu-5.png" alt="" />
-            <h3>tasty and healty</h3>
-            <div className="price">
-              $15.99 <span>20.99</span>
-            </div>
-            <Link to="/" className="btn">
-              add to cart
-            </Link>
-          </div>
-          <div className="box">
-            <img src="./img/menu-6.png" alt="" />
-            <h3>tasty and healty</h3>
-            <div className="price">
-              $15.99 <span>20.99</span>
-            </div>
-            <Link to="/" className="btn">
-              add to cart
-            </Link>
-          </div>
+          <Box
+            img="./img/menu-1.png"
+            name="Cafe sữa"
+            price="29.000"
+            btn="đặt ngay"
+          />
+          <Box
+            img="./img/menu-2.png"
+            name="Cafe đen"
+            price="25.000"
+            btn="đặt ngay"
+          />
+          <Box
+            img="./img/menu-3.png"
+            name="latte"
+            price="35.000"
+            btn="đặt ngay"
+          />
+          <Box
+            img="./img/menu-4.png"
+            name="Cappuchino"
+            price="35.000"
+            btn="đặt ngay"
+          />
+          <Box
+            img="./img/menu-5.png"
+            name="Choco latte"
+            price="45.000"
+            btn="đặt ngay"
+          />
+          <Box
+            img="./img/menu-6.png"
+            name="Bạc xỉu"
+            price="29.000"
+            btn="đặt ngay"
+          />
         </div>
       </section>
       {/* end menu
           product */}
       <section className="products" id="product">
         <h1 className="heading">
-          our <span>product</span>
+          Sản Phẩm <span>của chúng tôi</span>
         </h1>
         <div className="box-container">
-          <div className="box">
-            <div className="icons">
-              <Link to="/">
-                <ShoppingCartOutlined />
-              </Link>
-              <Link to="/">
-                <HeartOutlined />
-              </Link>
-              <Link to="/">
-                <EyeOutlined />
-              </Link>
-            </div>
-            <div className="image">
-              <img src="./img/product-1.png" alt="" />
-            </div>
-            <div className="content">
-              <h3>fresh coffee</h3>
-              <div className="stars">
-                <i>
-                  <StarOutlined />
-                </i>
-                <i>
-                  <StarOutlined />
-                </i>
-                <i>
-                  <StarOutlined />
-                </i>
-                <i>
-                  <StarOutlined />
-                </i>
-                <i>
-                  <StarOutlined />
-                </i>
-              </div>
-              <div className="price">
-                $15.99 <span>$20.99</span>
-              </div>
-            </div>
-          </div>
-          <div className="box">
-            <div className="icons">
-              <Link to="/">
-                <ShoppingCartOutlined />
-              </Link>
-              <Link to="/">
-                <HeartOutlined />
-              </Link>
-              <Link to="/">
-                <EyeOutlined />
-              </Link>
-            </div>
-            <div className="image">
-              <img src="./img/product-2.png" alt="" />
-            </div>
-            <div className="content">
-              <h3>fresh coffee</h3>
-              <div className="stars">
-                <i>
-                  <StarOutlined />
-                </i>
-                <i>
-                  <StarOutlined />
-                </i>
-                <i>
-                  <StarOutlined />
-                </i>
-                <i>
-                  <StarOutlined />
-                </i>
-                <i>
-                  <StarOutlined />
-                </i>
-              </div>
-              <div className="price">
-                $15.99 <span>$20.99</span>
-              </div>
-            </div>
-          </div>
-          <div className="box">
-            <div className="icons">
-              <Link to="/">
-                <ShoppingCartOutlined />
-              </Link>
-              <Link to="/">
-                <HeartOutlined />
-              </Link>
-              <Link to="/">
-                <EyeOutlined />
-              </Link>
-            </div>
-            <div className="image">
-              <img src="./img/product-3.png" alt="" />
-            </div>
-            <div className="content">
-              <h3>fresh coffee</h3>
-              <div className="stars">
-                <i>
-                  <StarOutlined />
-                </i>
-                <i>
-                  <StarOutlined />
-                </i>
-                <i>
-                  <StarOutlined />
-                </i>
-                <i>
-                  <StarOutlined />
-                </i>
-                <i>
-                  <StarOutlined />
-                </i>
-              </div>
-              <div className="price">
-                $15.99 <span>$20.99</span>
-              </div>
-            </div>
-          </div>
+          <Product
+            img="./img/product-1.png"
+            name="Robusta"
+            price="139.000"
+            prices="159.000"
+          />
+          <Product
+            img="./img/product-2.png"
+            name="Arabica"
+            price="239.000"
+            prices="259.000"
+          />
+          <Product
+            img="./img/product-3.png"
+            name="Culi"
+            price="299.000"
+            prices="319.000"
+          />
         </div>
       </section>
       {/* end product
           review */}
       <section className="review" id="review">
         <h1 className="heading">
-          customer's <span>review</span>
+          Khách hàng <span>đánh giá</span>
         </h1>
         <div className="box-container">
-          <div className="box">
-            <img src="./img/quote-img.png" alt="" className="quote" />
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-              quae sint, consequatur ullam quod necessitatibus, voluptatum
-              adipisci quidem minima delectus ad maiores odio, facere veritatis
-              laudantium? Recusandae excepturi sit quos?
-                      </p>
-                      <img src="./img/pic-1.png" className="user" alt="" />
-                      <h3>Bảo Long</h3>
-                      <div className="stars">
-                <i>
-                  <StarOutlined />
-                </i>
-                <i>
-                  <StarOutlined />
-                </i>
-                <i>
-                  <StarOutlined />
-                </i>
-                <i>
-                  <StarOutlined />
-                </i>
-                <i>
-                  <StarOutlined />
-                </i>
-              </div>
-                  </div>
-                  <div className="box">
-            <img src="./img/quote-img.png" alt="" className="quote" />
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-              quae sint, consequatur ullam quod necessitatibus, voluptatum
-              adipisci quidem minima delectus ad maiores odio, facere veritatis
-              laudantium? Recusandae excepturi sit quos?
-                      </p>
-                      <img src="./img/pic-2.png" className="user" alt="" />
-                      <h3>Thanh Nhi</h3>
-                      <div className="stars">
-                <i>
-                  <StarOutlined />
-                </i>
-                <i>
-                  <StarOutlined />
-                </i>
-                <i>
-                  <StarOutlined />
-                </i>
-                <i>
-                  <StarOutlined />
-                </i>
-                <i>
-                  <StarOutlined />
-                </i>
-              </div>
-          </div>
-          <div className="box">
-            <img src="./img/quote-img.png" alt="" className="quote" />
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-              quae sint, consequatur ullam quod necessitatibus, voluptatum
-              adipisci quidem minima delectus ad maiores odio, facere veritatis
-              laudantium? Recusandae excepturi sit quos?
-                      </p>
-                      <img src="./img/pic-3.png" className="user" alt="" />
-                      <h3>Gnol</h3>
-                      <div className="stars">
-                <i>
-                  <StarOutlined />
-                </i>
-                <i>
-                  <StarOutlined />
-                </i>
-                <i>
-                  <StarOutlined />
-                </i>
-                <i>
-                  <StarOutlined />
-                </i>
-                <i>
-                  <StarOutlined />
-                </i>
-              </div>
-          </div>
+          <Customs
+            img="./img/quote-img.png"
+            ctn="Rất hài lòng về sản phẩm và cách chăm sóc khách hàng."
+            avt="./img/pic-1.png"
+            name="Bảo Long"
+          />
+          <Customs
+            img="./img/quote-img.png"
+            ctn="Mình rất hài lòng vì được CaFeNa tư vấn những sản phẩm tốt, phù hợp với nhu cầu của mình, giá cả phải chăng, Nhân viên hỗ trợ rất nhiệt tình."
+            avt="./img/pic-2.png"
+            name="Thanh Nhi"
+          />
+          <Customs
+            img="./img/quote-img.png"
+            ctn="Tôi luôn tin tưởng vào sản phẩm dịch vụ của CaFeNa và sẽ tiếp tục sử dụng dịch vụ của CaFeNa trong thời gian tới"
+            avt="./img/pic-3.png"
+            name="Gnol"
+          />
         </div>
-          </section>
-          {/* end review
+      </section>
+      {/* end review
           contact */}
-          <section className="contact" id="contact">
-              <h1 className="heading"><span>contact</span> us</h1>
-              <div className="row">
-              <iframe
-          class="map"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.9184659261323!2d106.63840031428676!3d10.740767262789134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752e7b2a19979b%3A0xe90d60e621f86cb5!2zNTUxLzUgxJDGsOG7nW5nIFBo4bqhbSBWxINuIENow60sIFBoxrDhu51uZyA3LCBRdeG6rW4gNiwgVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1657308919303!5m2!1svi!2s"
-          allowfullscreen=""
-          loading="lazy"
-                  ></iframe>
-                  <form action="">
-                      <h3>get in touch</h3>
-                      <div className="inputBox">
-                          <span><UserOutlined /></span>
-                          <input type="text" placeholder="name" />
-                      </div>
-                      <div className="inputBox">
-                          <span><MailOutlined /></span>
-                          <input type="email" placeholder="email" />
-                      </div>
-                      <div className="inputBox">
-                          <span><PhoneOutlined /></span>
-                          <input type="number" placeholder="number" />
-                      </div>
-                      <input type="submit" value="contact now" className="btn" />
-                  </form>
-              </div>
-          </section>
-          {/* end contact
+      <section className="contact" id="contact">
+        <h1 className="heading">
+          <span>liên hệ</span> với chúng tôi
+        </h1>
+        <div className="row">
+          <iframe
+            class="map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.9184659261323!2d106.63840031428676!3d10.740767262789134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752e7b2a19979b%3A0xe90d60e621f86cb5!2zNTUxLzUgxJDGsOG7nW5nIFBo4bqhbSBWxINuIENow60sIFBoxrDhu51uZyA3LCBRdeG6rW4gNiwgVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1657308919303!5m2!1svi!2s"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+          <form action="">
+            <h3>liên lạc</h3>
+            <div className="inputBox">
+              <span>
+                <UserOutlined />
+              </span>
+              <input type="text" placeholder="Họ và Tên" />
+            </div>
+            <div className="inputBox">
+              <span>
+                <MailOutlined />
+              </span>
+              <input type="email" placeholder="email" />
+            </div>
+            <div className="inputBox">
+              <span>
+                <PhoneOutlined />
+              </span>
+              <input type="number" placeholder="Số điện thoại" />
+            </div>
+            <input type="submit" value="liên hệ" className="btn" />
+          </form>
+        </div>
+      </section>
+      {/* end contact
           blogs */}
-          <section className="blogs" id="blogs">
-              <h1 className="heading">our <span>blogs</span></h1>
-              <div className="box-container">
-                  <div className="box">
-                      <div className="image">
-                      <img src="./img/blog-1.jpeg" alt="" />
-                      </div>
-                      <div className="content">
-                          <Link to='/' className="title">tasty and refreshing coffee</Link>
-                          <span>by admin / 21st may, 2021</span>
-                          <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Laudantium culpa corporis magnam.
-                          </p>
-                          <Link to='/' className="btn">read more</Link>
-                      </div>
-                  </div>
-                  <div className="box">
-                      <div className="image">
-                      <img src="./img/blog-2.jpeg" alt="" />
-                      </div>
-                      <div className="content">
-                          <Link to='/' className="title">tasty and refreshing coffee</Link>
-                          <span>by admin / 21st may, 2021</span>
-                          <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Laudantium culpa corporis magnam.
-                          </p>
-                          <Link to='/' className="btn">read more</Link>
-                      </div>
-                  </div>
-                  <div className="box">
-                      <div className="image">
-                      <img src="./img/blog-3.jpeg" alt="" />
-                      </div>
-                      <div className="content">
-                          <Link to='/' className="title">tasty and refreshing coffee</Link>
-                          <span>by admin / 21st may, 2021</span>
-                          <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Laudantium culpa corporis magnam.
-                          </p>
-                          <Link to='/' className="btn">read more</Link>
-                      </div>
-                  </div>
-              </div>
-          </section>
-          {/* end blogs
+      <section className="blogs" id="blogs">
+        <h1 className="heading">
+          Bài <span>viết</span>
+        </h1>
+        <div className="box-container">
+          <Blogs
+            img="./img/blog-1.jpeg"
+            hd="Mỗi buổi sáng, nếu không có tách cà phê, tôi cảm thấy mình vô
+            vị!"
+            ad="by admin / 21st may, 2021"
+            ctn="Cà phê không phải là thú thanh thản như trà, càng không mạnh mẽ bạo liệt như rượu."
+            btn="đọc thêm"
+          />
+          <Blogs
+            img="./img/blog-2.jpeg"
+            hd="Cà phê khiến ta mạnh mẽ, điềm đạm và thông thái"
+            ad="by admin / 21st may, 2021"
+            ctn="Người thưởng thức nhẹ nhàng cho rằng cà phê là gạch nối giữa
+            niềm vui và nỗi buồn."
+            btn="đọc thêm"
+          />
+          <Blogs
+            img="./img/blog-3.jpeg"
+            hd="Tôi yêu ly cà phê buổi sáng, con đường ngập lá vàng"
+            ad="by admin / 21st may, 2021"
+            ctn="Một tách cà phê vào buổi sáng mang lại sự tuyệt vời mà không
+            buổi nào có thể tạo ra được."
+            btn="đọc thêm"
+          />
+        </div>
+      </section>
+      {/* end blogs
           footer */}
-          <section className="footer">
-              <div className="share">
-                  <Link to='/'><FacebookOutlined /></Link>
-                  <Link to='/'><TwitterOutlined /></Link>
-                  <Link to='/'><InstagramOutlined /></Link>
-                  <Link to='/'><LinkedinOutlined /></Link>
-                  <Link to='/'><YoutubeOutlined /></Link>
-              </div>
-              <div className="links">
-                  <Link to='/home'></Link>
-                  <Link to='/about'></Link>
-                  <Link to='/menu'></Link>
-                  <Link to='/product'></Link>
-                  <Link to='/review'></Link>
-                  <Link to='/contact'></Link>
-                  <Link to='/blogs'></Link>
-              </div>
-          </section>
+      <section className="footer">
+        <div className="share">
+          <Link to="/">
+            <FacebookOutlined />
+          </Link>
+          <Link to="/">
+            <TwitterOutlined />
+          </Link>
+          <Link to="/">
+            <InstagramOutlined />
+          </Link>
+          <Link to="/">
+            <LinkedinOutlined />
+          </Link>
+          <Link to="/">
+            <YoutubeOutlined />
+          </Link>
+        </div>
+        <div className="links">
+          <a href="#home">Trang chủ</a>
+          <a href="#about">Giới thiệu</a>
+          <a href="#menu">Thực đơn</a>
+          <a href="#product">Sản phẩm</a>
+          <a href="#review">Đánh giá</a>
+          <a href="#contact">Liên hệ</a>
+          <a href="#blogs">Bài viết</a>
+        </div>
+      </section>
     </div>
   );
 }
