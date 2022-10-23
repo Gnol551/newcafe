@@ -6,15 +6,15 @@ export default function Product(props) {
     return (
         <div  className="box">
 <div className="icons">
-              <a href="/">
+              <button>
                 <ShoppingCartOutlined />
-              </a>
-              <a href="/">
+              </button>
+              <button>
                 <HeartOutlined />
-              </a>
-              <a href="/">
+              </button>
+              <button>
                 <EyeOutlined />
-              </a>
+              </button>
             </div>
             <div className="image">
               <img src={props.img} alt="" />

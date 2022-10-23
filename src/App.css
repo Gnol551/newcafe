@@ -143,6 +143,23 @@ section {
 .header .cart-items-container.active {
   right: 0;
 }
+.header .icons{
+  position: relative;
+}
+.header .icons #cart-btn{
+ padding-right: 6px;
+}
+.header .icons strong{
+  padding: 0 3px;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+}
 .header .cart-items-container .cart-items {
   position: relative;
   margin: 2rem 0;
@@ -269,16 +286,14 @@ section {
   border: var(--border);
   padding: 2rem;
 }
-.products .box-container .box .icons a {
-  height: 5rem;
-  width: 5rem;
-  line-height: 5rem;
+.products .box-container .box .icons button {
   font-size: 2rem;
   border: var(--border);
   color: #fff;
   margin: 0.3rem;
+  background: black;
 }
-.products .box-container .box .icons a:hover {
+.products .box-container .box .icons button:hover {
   background: var(--main-color);
 }
 .products .box-container .box .image {

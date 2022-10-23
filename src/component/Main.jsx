@@ -38,8 +38,9 @@ function Main() {
         </nav>
         <div className="icons">
           <div>
-            <ShoppingCartOutlined id="cart-btn" />
+            <ShoppingCartOutlined id="cart-btn" /> 
           </div>
+          <strong>0</strong>
         </div>
         {/* <div className="seacrch-form">
           <input type="search" id="search-box" placeholder="search here..." />

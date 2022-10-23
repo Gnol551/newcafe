@@ -1,5 +1,13 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 export default function Box(props) {
+    const Cards = ({ item, handleClick }) => {
+        const { img, name, price, btn } = item;
+    }
+    const [cart, setCart] = useState([]);
+   const handleClick = () => {
+       alert('hello')
+   }
     return (
         <div className="box">
             <img src={props.img} alt="" />
@@ -7,9 +15,9 @@ export default function Box(props) {
             <div className="price">
             {props.price}
             </div>
-            <a href="#" className="btn">
+            <button className="btn"  onClick={handleClick}>
             {props.btn}
-            </a>
+            </button>
         </div>
     )
 }
